@@ -9,6 +9,10 @@ For each content type you will need to set the display settings for Carousel as 
 
 If you are using a `field_link` provided by the [Link feature](https://github.com/misd-service-development/drupal-feature-link) you also need to make your link field available (it doesn't matter what format setting you use). The carousel item will then link to your custom URL rather than to the node.
 
+If your content type is of type 'homepage_carousel' then the carousel item will not link to the node (But may link to a custom URL using the {Link Feature] as above.
+
+If your node has a field 'field_hide_title' and this field is set to true, then the title caption will not be output.
+
 Creating carousels
 ------------------
 
