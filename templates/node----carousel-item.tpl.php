@@ -1,7 +1,10 @@
 <?php
 
 if (array_key_exists('field_link', $content)):
-  $url = $content['field_link']['#items'][0]['url'];
+  # following link.module's implementation of theme_link_formatter_link_plain
+  # otherwise e.g. query params get stripped
+  $link_element = $content['field_link'][0]['#element'];
+  $url = url($link_element['url'], $link_element);
 else:
   $url = ($type == 'homepage_carousel') ? NULL : $node_url;
 endif;
